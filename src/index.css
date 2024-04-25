@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bord";
+  src: url("./fonts/bord-demo/Bord.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Segoe";
+  src: url("./fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Text-Semilight.ttf")
+    format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Segoe-semi-bold";
+  src: url("./fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Display-Semibold.ttf")
+    format("truetype");
+  font-weight: 600;
+}
+
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.table {
+  font-size: 24px;
+  width: 100%;
+}
+
+.table-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.table-row .second {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+}
+
+.table-row .second h1 {
+  width: 129px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.Segoe-semi-bold {
+  font-weight: 600;
+  font-family: "Segoe-semi-bold";
+}
+
+.Segoe {
+  font-weight: 500;
+  font-family: "Segoe";
+}
+
+.Bord {
+  font-family: "Bord";
+}
+
+.ok {
+  background: #171717;
+}
+
+@media screen and (max-width: 1024px) {
+  .table-row .second {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .table {
+    font-size: 18px;
+  }
+  .table-row .second {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .table {
+    font-size: 16px;
+  }
+  .table-row .second {
+    width: 160px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .table {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .table {
+    font-size: 14px;
+  }
+  .table-row .second {
+    width: 150px;
+  }
+}
+
+.one {
+  color: #7d26cd;
+}
+
+.tow {
+  color: #a14af1;
+}
+
+.three {
+  color: #c66cff;
+}
+.challenge-submit-button {
+  background: linear-gradient(
+    90deg,
+    rgba(125, 38, 205, 1) 0%,
+    rgba(23, 23, 23, 0.011642156862745057) 100%
+  );
+}
+
+.wid {
+  max-width: 700px;
+}
+
+.tx {
+  font-size: 60px;
+}
+
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  
+  & .path {
+    stroke: hsl(210, 70, 75);
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
